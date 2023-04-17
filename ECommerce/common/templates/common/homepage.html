@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'styles/homepage.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+        #head {
+            padding-left: 0px;
+            background-color: violet;
+            text-align: center;
+        }
+
+        #headcaption {
+            padding-left: 0px;
+            background-color: red;
+            text-align: center;
+        }
+
+        .button {
+            padding-left: 0px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="">
+        <h1 id="head">Let's Shoppie </h1>
+        <h6 id="headcaption">best shopping experience ever</h6>
+
+    </div>
+
+    <div class="button">
+
+<a href="{% url 'common:c-signup' %}" class="btn btn-primary">Customer SignUp</a> <br> <br>
+<a href="{% url 'common:c-login' %}" class="btn btn-secondary">Customer Login</a>  <br> <br>
+<a href="{% url 'common:s-signup' %}" class="btn btn-info">Seller SignUp</a> <br> <br>
+<a href="{% url 'common:s-login' %}" class="btn btn-warning">Seller login</a> <br> <br>
+    </div>
+
+</body>
+
+</html>

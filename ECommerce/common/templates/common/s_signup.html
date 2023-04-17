@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form{
+            padding-left: 0px;
+            text-align: center;
+        }
+        #head {
+            padding-left: 0px;
+            background-color: violet;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form">
+
+        <h2 id="head">Seller Sign up Here</h2>
+
+    
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="fname"> <b>Full Name:</b></label><br>
+        <input type="text" id="fname" name="s_fname" value=""><br>
+        <label for="lname"><b>Company Name:</b></label><br>
+        <input type="text" id="cname" name="s_compname" value=""> <br>
+        <label for="lname"><b>Bank Account No:</b></label><br>
+        <input type="number" id="bankacc" name="s_bankacc" value=""> <br>
+        <label for="lname"><b>Account Holder Name:</b></label><br>
+        <input type="text" id="aname" name="s_accname" value=""> <br>
+        <label for="lname"><b>IFSC Code:</b></label><br>
+        <input type="text" id="ifsc" name="s_ifsc" value=""> <br>
+        <label for="lname"><b>Branch Name:</b></label><br>
+        <input type="text" id="branch" name="s_branch" value=""> <br>
+        <label for="email"><b>E Mail:</b></label><br>
+        <input type="email" id="email" name="s_email"> <br>
+        <label for="mob"><b>Mobile Number:</b></label><br>
+        <input type="number" id="mobilenumber" name="s_mnumber" value=""> <br>
+        <label for="address"><b>Address:</b></label><br>
+        <textarea name="s_address" id="address" cols="30" rows="10"></textarea>
+        <br> <br>
+        <!-- <label for="password"><b>Password:</b></label><br>
+        <input type="text" id="password" name="s_pass" value=""> <br> <br> -->
+
+        <label for="lname"><b>Image:</b></label><br>
+        <input type="file" id="image" name="s_image" value=""> <br>
+
+
+        <!-- <input type="submit" value="SignUp"> -->
+        <button type="submit" >SignUp</button>
+        <br><br>
+        <p style="color:brown;"> {{message}}</p>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

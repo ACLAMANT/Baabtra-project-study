@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form{
+            padding-left: 0px;
+            text-align: center;
+        }
+        #head {
+            padding-left: 0px;
+            background-color: violet;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="form">
+
+        <h2 id="head">Customer Sign up Here</h2>
+
+    
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="fname"> <b>First Name:</b></label><br>
+        <input type="text" id="fname" name="c_fname" value="John"><br>
+        <label for="lname"><b>Last Name:</b></label><br>
+        <input type="text" id="lname" name="c_lname" value="Doe"> <br>
+        <label for="email"><b>E Mail:</b></label><br>
+        <input type="text" id="email" name="c_email"> <br>
+        <label for="mob"><b>Mobile Number:</b></label><br>
+        <input type="text" id="mobilenumber" name="c_mnumber" value="9846xxxx"> <br>
+        <label for="address"><b>Address:</b></label><br>
+        <textarea name="c_address" id="address" cols="30" rows="10"></textarea>
+        <br> <br>
+        <label for="password"><b>Password:</b></label><br>
+        <input type="text" id="password" name="c_pass" value="Abc@123"> <br> <br>
+
+        <!-- <input type="submit" value="SignUp"> -->
+        <button type="submit" >SignUp</button>
+
+
+
+
+
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
